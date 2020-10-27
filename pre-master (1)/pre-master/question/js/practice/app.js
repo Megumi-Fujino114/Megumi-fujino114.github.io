@@ -50,6 +50,7 @@ let total = math + english;
 if(math >= 60 && english>= 60 && total >=140){
 	console.log("合格");
 }else{
+
 	console.log("不合格");
 }
 
