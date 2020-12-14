@@ -1,0 +1,137 @@
+body{
+    font-family: arial black;
+}
+
+/* header */
+
+header{
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.dan{
+    display: flex;
+    margin-right:48px;
+}
+
+
+.dan li{
+    margin-left:40px;
+    font-size:20px;
+  
+}
+
+
+header img{
+    height: 90px;
+    width: 90px;
+    margin-left: 20px;
+    margin-top:10px;
+}
+
+/* headerここまで */
+/* navここから */
+
+nav{
+    background-image:url("../img/top-coffee.jpg");
+    width: 100%;
+    height:800px;
+    background-size:cover;
+    margin:0 auto;
+    font-size:40px;
+    font-family: cursive;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav{
+    font-size:40px;
+    font-family: serif;
+    color:white;
+    margin-left:100px;
+}
+
+/* navここまで */
+
+/*  mainここから*/
+
+main{
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+	width: 230px;
+    height: 230px;
+    margin-right:160px;
+}
+
+.logo-in p{
+    font-size:50px;
+}
+
+.animation {
+	animation-timing-function:ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1.5s;
+}
+
+.logo{
+    animation-name: anim_v;
+}
+
+@keyframes anim_v {
+	0% {
+	transform: translate(0, 30px);
+	}
+	100% {
+	transform: translate(0, -30px);
+	}
+}
+
+
+/* photoここから */
+
+.photo{
+    height:700px;
+    width:100%;
+    background-image: url(../img/coffeeshop2.jpg);
+    background-size:cover;
+}
+
+/* sectionここから */
+
+section{
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+    margin-top:50px;
+}
+
+section p{
+    width: 800px;
+    font-size:50px;
+    font-family: serif;
+    margin:0 auto;
+}
+
+.album{
+    margin-top:300px;
+}
+
+footer {
+    margin:0 auto;
+}
+
+footer p{
+    font-size:40px;
+}
+
+
