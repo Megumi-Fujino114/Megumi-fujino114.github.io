@@ -92,28 +92,21 @@ setInterval(function() {
 // --------------------------
 setInterval(function() {
   $('.logo-subtitle').fadeIn();
-}, 12500);
+},12500);
 
 //---------------------------
 // ここからlist表示アニメーション
 // --------------------------
-// $(window).on("scroll",function(){
-//   // idがq11の要素の画面最上部からの距離を取得
-//   let pojition = $(".target").offset().top;
 
-//   // 画面の高さ（ブラウザで見えている流域）
-//   let wh = $(window).height();
-
-//   // 現在のスクロール位置(今見てるところ)
-//   let now_pojition = $(window).scrollTop();
-
-//   if(pojition <= wh + now_pojition){
-//   // q11まで画面がスクロールされている
-//    $(".target").removeClass("hide");
-//   }else{
-//   //q11がまだ見えていない
-//    $(".target").addClass("hide");
-//   }
-// });
-
+$(window).scroll(function (){
+  $('.fadein').each(function(){
+      var elemPos = $(this).offset().top,
+          scroll = $(window).scrollTop(),
+          windowHeight = $(window).height();
+        if (scroll > elemPos - windowHeight + 100){
+            $(this).addClass('scrollin');
+          }
+      }); 
+   });
 });
+

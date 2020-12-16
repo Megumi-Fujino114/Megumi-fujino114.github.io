@@ -271,6 +271,7 @@ li {
   flex: 0 0 32.31552%;
   margin-right: 1.52671%;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .works-item:nth-of-type(3n) {
@@ -310,12 +311,19 @@ li {
   height:300px;
 }
 
-.target {
-  transition: all 4s ease;
+/*--------------------------------
+ works アニメーション
+---------------------------------*/
+
+.fadein {
+  opacity: 0;
+  transform : translate(0, 100px);
+  transition : all 1200ms;
 }
 
-.target.hide {
-  opacity: 0;
+.fadein.scrollin{
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 /*--------------------------------
