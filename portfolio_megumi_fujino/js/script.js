@@ -108,5 +108,7 @@ $(window).scroll(function (){
           }
       }); 
    });
+
+   
 });
 

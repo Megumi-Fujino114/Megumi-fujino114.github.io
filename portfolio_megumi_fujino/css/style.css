@@ -86,7 +86,7 @@ li {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-duration: 2.5s;
+  animation-duration: 4.5s;
 }
 
 .rogo {
@@ -94,13 +94,15 @@ li {
 }
 
 @keyframes anim_v {
-  0% {
-    transform: translate(0, 0px);
+  50% {
+    transform:  rotateY(270deg);
   }
   100% {
-    transform: translate(0, -80px);
+    transform:  rotateY(360deg);
   }
 }
+
+
 /*--------------------------------
  文字
 ---------------------------------*/
@@ -348,6 +350,12 @@ li {
 }
 
 /*--------------------------------
+ Featureアニメーション
+---------------------------------*/
+
+
+
+/*--------------------------------
  About
 ---------------------------------*/
 .about-section .inner {
@@ -404,10 +412,28 @@ li {
   margin-bottom: 50px;
 }
 
+/* ボワッと拡大アニメーション */
+
 .skill-image-wrapper {
   flex: 0 0 60px;
   margin-right: 20px;
+  margin: 0 auto;
+  overflow: hidden;
 }
+
+.skill-image-wrapper img{
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  padding-right:10px;
+}
+
+.skill-image-wrapper img:hover{
+  transform: scale(1.2) rotate(0deg);
+  transition-duration: 0.5s;
+}
+/*  ここまで　*/
 
 .skill-body {
   flex: 1;
