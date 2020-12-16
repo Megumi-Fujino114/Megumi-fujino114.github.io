@@ -336,37 +336,7 @@ button:hover{
 	background-color: #77a8cd;
 }
 
-/*アニメーション*/
-.kamome {
-	/*position: absolute;*/
-	/*top: 60px;*/
-}
 
-.kamome img {
-	width: 180px;
-	height: 90px;
-}
-
-.animation {
-	animation-timing-function:ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-duration: 1.5s;
-}
-
-.kamome{
-    animation-name: anim_v;
-}
-
-@keyframes anim_v {
-	0% {
-	transform: translate(0, 0px);
-	}
-	100% {
-	transform: translate(0, -80px);
-	}
-}
-/**/
 
 footer{
 	height: 60px;
