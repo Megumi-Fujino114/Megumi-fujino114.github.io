@@ -109,6 +109,20 @@ $(window).scroll(function (){
       }); 
    });
 
+//---------------------------
+// ここからfuture表示アニメーション
+// --------------------------
+
+   $(window).scroll(function (){
+    $('.fadein_2').each(function(){
+        var elemPos2 = $(this).offset().top,
+            scroll = $(window).scrollTop(),
+            windowHeight = $(window).height();
+          if (scroll > elemPos2 - windowHeight + 100){
+              $(this).addClass('scrollin_2');
+            }
+        }); 
+     });
    
 });
 

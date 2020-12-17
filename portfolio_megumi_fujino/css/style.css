@@ -157,7 +157,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 86vh;
+  height: 600px;
   flex-direction: column;
 }
 
@@ -166,6 +166,8 @@ li {
   margin-bottom: 30px;
   padding: 0 20px;
   text-align: center;
+  height:300px;
+  margin-top:190px;
 }
 
 .demoTxt {
@@ -179,7 +181,7 @@ li {
     color:#CC6666;
     }
 
- .demoTxt span { 
+.demoTxt span { 
     opacity: 0;
     -webkit-transition: .6s ease-in-out;
     transition: .6s ease-in-out;
@@ -192,8 +194,9 @@ li {
   text-align: center;
   letter-spacing: .2em;
   display: none;
-
 }
+
+
 
 
 /*--------------------------------
@@ -353,6 +356,17 @@ li {
  Featureアニメーション
 ---------------------------------*/
 
+.fadein_2 {
+  opacity: 0;
+  transform : translate(0, 100px);
+  transition : all 1200ms;
+}
+
+.fadein_2.scrollin_2{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 
 
 /*--------------------------------
@@ -390,6 +404,32 @@ li {
   margin-bottom: 20px;
 }
 
+svg{
+  width: 280px;
+  height: 230px;
+}
+
+.animation2 {
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+
+.rogo2 {
+  animation-name: anim_m;
+}
+
+@keyframes anim_m {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, -30px);
+  }
+}
+
+
 /*--------------------------------
  Skill
 ---------------------------------*/
@@ -412,7 +452,10 @@ li {
   margin-bottom: 50px;
 }
 
-/* ボワッと拡大アニメーション */
+
+/*--------------------------------
+ボワッと拡大アニメーション 
+---------------------------------*/
 
 .skill-image-wrapper {
   flex: 0 0 80px;
@@ -432,7 +475,10 @@ li {
   transform: scale(1.2) rotate(0deg);
   transition-duration: 0.5s;
 }
-/*  ここまで　*/
+
+/*--------------------------------
+ ここまで　
+---------------------------------*/
 
 .skill-body {
   flex: 1;
@@ -517,6 +563,24 @@ li {
   text-align: center;
 }
 
+.rolls:hover {
+  display  : inline-block;
+  animation: rollkAnime 4.9s linear infinite;
+  font-size: 160%
+}
+@keyframes rollkAnime{
+   50% {
+         transform: rotate(180deg);
+       }
+  100% {
+         transform: rotate(360deg);
+       }
+}
+
+#icon{
+  font-size:50px;
+  color:green;
+}
 /*--------------------------------
  フッター
 ---------------------------------*/
@@ -544,10 +608,6 @@ li {
   background-color: #ccc;
 }
 
-#icon{
-  font-size:50px;
-  color:green;
-}
 
 /*media Queries 767
 ----------------------------------------------------*/
@@ -586,6 +646,10 @@ li {
     font-size: 22px;
   }
 
+  .demoTxt {
+    font-size: 58px;
+    }
+
   /* レイアウト */
   .wrapper {
     padding-top: 82px;
@@ -619,8 +683,8 @@ li {
   }
 
   .gnav-item {
-    font-size: 13px;
-    padding: 2px 15px;
+    font-size: 9px;
+    padding: 2px 8px;
   }
 
   .gnav-link {
@@ -635,6 +699,34 @@ li {
     display: none;
   }
 
+  /*  ローディングアニメーション*/
+  .start p{
+  position: fixed;
+	left: 0;
+	top: 300px;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+  width: 400px;
+  font-size:50px;
+  font-weight: 400;
+  animation-duration: 4.5s;
+  }
+
+  .rogo {
+    animation-name: anim_v;
+  }
+  
+  @keyframes anim_v {
+    0% {
+      transform: translate(0, 80px);
+    }
+    100% {
+      transform: translate(0, -80px);
+    }
+  }
+
+
   /* Works */
   .works-body {
     text-align: left;
@@ -645,7 +737,10 @@ li {
   }
 
   .works-list {
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: -40px;
   }
 
   .works-item {
@@ -671,9 +766,36 @@ li {
   }
 
   .about-image-wrapper {
-    width: 100px;
+    width: 200px;
+    height: 200px;
     max-width: 100%;
     margin: 0 auto 20px;
+  }
+
+  .about-image {
+    border-radius: 30%;
+    height: 200px;
+    width:200px;
+    margin-left:75px;
+  }
+
+  svg{
+    width: 180px;
+    height: 150px;
+    margin-left:50px;
+  }
+
+  .rogo2 {
+    animation-name: anim_m;
+  }
+  
+  @keyframes anim_m {
+    0% {
+      transform: translate(0, 0px);
+    }
+    100% {
+      transform: translate(0, -15px);
+    }
   }
 
   /* Skill */
@@ -733,8 +855,17 @@ li {
     margin: 0 10px;
   }
 
+  #icon{
+    font-size:40px;
+    color:green;
+  }
+
+  .rolls:hover{
+    display: none;
+  }
+
   /* フッター */
   .footer .inner {
     padding: 20px 0;
-  }
+  } 
 }
