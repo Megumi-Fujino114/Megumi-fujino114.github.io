@@ -331,6 +331,30 @@ li {
   transform: translate(0, 0);
 }
 
+.item:nth-child(1) {
+  -webkit-animation: example 1.0s ease 3s 1 forwards;
+  animation: example 3s ease 3s 1 forwards;
+}
+.item:nth-child(2) {
+  -webkit-animation: example 4.5s ease 5s 2 forwards;
+  animation: example 8s ease 5s 2 forwards;
+}
+.item:nth-child(3) {
+  -webkit-animation: example 8.5s ease 10s 3 forwards;
+  animation: example 15s ease 10s 3 forwards;
+}
+
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+
 /*--------------------------------
  Feature
 ---------------------------------*/

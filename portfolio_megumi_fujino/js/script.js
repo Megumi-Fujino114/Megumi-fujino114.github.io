@@ -97,7 +97,7 @@ setInterval(function() {
 //---------------------------
 // ここからlist表示アニメーション
 // --------------------------
-
+i = 0;
 $(window).scroll(function (){
   $('.fadein').each(function(){
       var elemPos = $(this).offset().top,
@@ -107,6 +107,7 @@ $(window).scroll(function (){
             $(this).addClass('scrollin');
           }
       }); 
+        $(this).delay(5000 * i).fadeIn(3000);
    });
 
 //---------------------------
