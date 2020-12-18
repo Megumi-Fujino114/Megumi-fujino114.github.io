@@ -685,6 +685,14 @@ svg{
     transform: none;
   }
 
+  /* BGM */
+  audio{
+    margin-top:0px;
+    margin-left:5px;
+    width: 100px;
+    height:20px;
+  }
+
   /* 文字 */
   .section-heading {
     margin-bottom: 20px;
