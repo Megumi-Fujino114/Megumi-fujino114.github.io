@@ -97,6 +97,7 @@ setInterval(function() {
 //---------------------------
 // ここからlist表示アニメーション
 // --------------------------
+
 i = 0;
 $(window).scroll(function (){
   $('.fadein').each(function(){
@@ -123,6 +124,7 @@ $(window).scroll(function (){
               $(this).addClass('scrollin_2');
             }
         }); 
+        
      });
    
 });
