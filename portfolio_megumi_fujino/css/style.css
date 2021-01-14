@@ -213,22 +213,12 @@ li {
   display: none;
 }
 
-
-/*--------------------------------
- BGM　表示
----------------------------------*/
-
-audio{
-  margin-top:8px;
-  margin-left:10px;
-}
-
 /*--------------------------------
  グローバルナビ
 ---------------------------------*/
 .gnav {
   display:flex;
-  justify-content: space-between;
+  justify-content:flex-end;
   position: fixed;
   top: 0;
   left: 0;
